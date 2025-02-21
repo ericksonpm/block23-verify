@@ -1,65 +1,21 @@
-/* Direct copy from block26-verify repository */
+/* Matching Block26-verify styling without VA branding */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f8f9fa;
     margin: 0;
     padding: 20px;
+    line-height: 1.6;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     background: white;
-    padding: 30px;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.header-logo {
-    height: 60px;
-    margin-right: 20px;
-    vertical-align: middle;
-}
-
-.form-section {
-    margin: 25px 0;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.btn-validate {
-    background-color: #005ea2;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.result-box {
-    margin-top: 25px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-left: 4px solid #005ea2;
-}
-
-.references {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
-
-
-/* Neutral styling */
 header h1 {
     color: #2c3e50;
     border-bottom: 2px solid #3498db;
@@ -67,12 +23,52 @@ header h1 {
 }
 
 .disclaimer {
-    color: #7f8c8d;
-    font-size: 0.9em;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
     margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.form-section {
+    margin: 2rem 0;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 .btn-validate {
-    background-color: #3498db; /* Neutral blue */
-    /* Rest of button styling remains */
+    background: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.result-box {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+
+.result-content {
+    padding: 1rem;
+}
+
+.references {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dee2e6;
 }
