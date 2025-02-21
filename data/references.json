@@ -1,0 +1,11 @@
+{
+    "rules": {
+        "5-point": "5 U.S.C. 2108(2) - 180+ days during recognized campaign",
+        "10-point": "5 CFR 211.302(a)(1) - Disability rating requirements",
+        "sole-survivor": "DoDI 1312.03 - Sole Survivorship Policy"
+    },
+    "forms": {
+        "SF-15": "https://www.opm.gov/forms/pdf_fill/sf15.pdf",
+        "DD214": "Standard Form required for all separation documents"
+    }
+}
