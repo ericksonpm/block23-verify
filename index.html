@@ -3,18 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SF-50 Block 23 Validator</title>
+    <title>Block 23 Validator - Unofficial Tool</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Block 23 Validation Tool</h1>
-            <p class="disclaimer">Unofficial validation helper for personal use</p>
+            <h1>SF-50 Block 23 Validator</h1>
+            <div class="disclaimer">
+                <p>⚠️ Unofficial tool for personal verification only. Not affiliated with any government agency.</p>
+            </div>
         </header>
 
         <div class="form-section">
-            <!-- Form inputs remain the same -->
+            <div class="input-group">
+                <label for="servicePeriod">Military Service Period:</label>
+                <select id="servicePeriod" class="form-control">
+                    <option value="">Select service period</option>
+                    <option value="gulf">Gulf War Era (08/1990+)</option>
+                    <option value="post911">Post-9/11 Operations</option>
+                    <option value="other">Other Campaigns</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="disabilityPercent">Service-Connected Disability (%):</label>
+                <input type="number" id="disabilityPercent" class="form-control" 
+                       min="0" max="100" placeholder="0-100%">
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="purpleHeart"> Purple Heart Recipient
+                </label>
+            </div>
+
+            <div class="input-group">
+                <label for="userCode">Your SF-50 Block 23 Code:</label>
+                <input type="number" id="userCode" class="form-control" 
+                       min="1" max="7" placeholder="1-7">
+            </div>
+
+            <button class="btn-validate" onclick="validateCode()">Verify Code</button>
         </div>
 
         <div class="result-box" id="result">
@@ -23,15 +53,17 @@
 
         <div class="references">
             <h3>Official Reference Materials</h3>
-            <div class="disclaimer">
-                Note: This tool is not affiliated with any government agency
-            </div>
             <ul>
-                <li><a href="https://www.opm.gov/forms/pdf_fill/sf15.pdf" target="_blank">SF-15 Form (OPM)</a></li>
-                <li><a href="https://www.law.cornell.edu/uscode/text/5/2108" target="_blank">5 U.S.C. § 2108</a></li>
+                <li><a href="https://www.opm.gov/forms/pdf_fill/sf15.pdf" target="_blank">Standard Form 15 (SF-15)</a> - OPM</li>
+                <li><a href="https://www.law.cornell.edu/uscode/text/5/2108" target="_blank">5 U.S.C. § 2108</a> - Veterans' Preference</li>
+                <li><a href="https://www.ecfr.gov/current/title-5/part-211" target="_blank">5 CFR Part 211</a> - Veteran Hiring Regulations</li>
             </ul>
+            <div class="disclaimer">
+                Always consult official documents and HR representatives for formal determinations
+            </div>
         </div>
     </div>
+
     <script src="js/app.js"></script>
 </body>
 </html>
