@@ -27,16 +27,25 @@ function validateCode() {
     const resultDiv = document.getElementById('resultText');
     const resultBox = document.getElementById('result');
     
+    // Clear previous results
+    resultDiv.className = '';
+    resultBox.className = 'result-box';
+
     if (userCode === calculatedCode) {
-        resultDiv.innerHTML = "✅ Code matches expected value";
-        resultBox.style.backgroundColor = "#d4edda";
-        resultBox.style.border = "2px solid #c3e6cb";
+        resultDiv.innerHTML = `<span class="success-icon">✓</span> Valid Block23 credential`;
+        resultDiv.classList.add('success');
+        resultBox.classList.add('success-bg');
     } else {
-        resultDiv.innerHTML = `⚠️ Potential discrepancy detected<br><br>
-            <strong>Expected Code:</strong> ${calculatedCode} (${validationRules[calculatedCode].desc})<br>
-            <strong>Legal Reference:</strong> ${validationRules[calculatedCode].ref}<br><br>
-            <em>Recommended action:</em> Verify with <a href="https://www.opm.gov/forms/pdf_fill/sf15.pdf" target="_blank">SF-15 Form</a> and consult HR`;
-        resultBox.style.backgroundColor = "#f8d7da";
-        resultBox.style.border = "2px solid #f5c6cb";
+        resultDiv.innerHTML = `
+            <span class="error-icon">✗</span> Invalid verification code<br><br>
+            <div class="error-details">
+                <strong>Expected Code:</strong> ${calculatedCode} (${validationRules[calculatedCode].desc})<br>
+                <strong>Legal Reference:</strong> ${validationRules[calculatedCode].ref}<br><br>
+                <em>Recommended action:</em> Verify with 
+                <a href="https://www.opm.gov/forms/pdf_fill/sf15.pdf" target="_blank">SF-15 Form</a> 
+                and consult HR
+            </div>`;
+        resultDiv.classList.add('error');
+        resultBox.classList.add('error-bg');
     }
 }
